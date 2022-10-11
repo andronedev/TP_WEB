@@ -1,0 +1,81 @@
+XHTML	 [titre de niveau 1]
+       
+I INTRODUCTION	 [titre de niveau 2]
+[paragraphe]
+L'un des principes du développement WEB actuel est la séparation rigoureuse de deux éléments :
+[liste a puces]
+* le contenu d'un site (le texte, les images) 
+* le présentation de ce contenu (design du site, choix des polices de caractère, des couleurs, etc.)
+[paragraphe]
+Deux techniques et deux langages sont apparus pour répondre à ces deux aspects du développement : XHTML (eXtensible HyperText Markup Language) pour structurer le contenu des pages et CSS (Cascading Style Sheet) pour définir la mise en forme de ce contenu. Ce poly est consacré à l'étude des bases de XHTML.
+[paragraphe]
+XHTML est issu d'une famille nombreuse, et elle n'a pas fini de s'étendre ! L'aïeul s'appelle SGML ; il eut deux enfants, HTML puis XML. XML eut à son tour un enfant, qui s'appelle XHTML et ressemble comme deux gouttes d'eau à son oncle HTML. 
+La norme du XHTML est définie par le W3C, qui encourage les concepteurs de pages web à passer du HTML au XHTML. L'avantage du XHTML sur le HTML est son extensibilité, qui lui vient du langage XML. À terme, le HTML est appelé à disparaître. 
+
+II DEMARRER RAPIDEMENT [titre de niveau 2]
+
+II.1 Premier document [titre de niveau 3]
+
+N'importe quel éditeur de texte (notepad, scriptEdit, vim) convient pour créer un document HTML. Vous n'avez pas besoin de connexion internet, ou de serveur pour visualiser le résultat : un navigateur suffit (Netscape Navigator, Internet Explorer, Mozilla ...)
+
+Tapez le document suivant, et enregistrez le sous le nom : monpremier.html
+Visualisez le ensuite avec votre navigateur favori.
+Prenez le temps de comparer votre code XHTML et ce que vous voyez à l'écran. La suite du cours détaillera certaines balises que vous avez utilisé.
+
+[exemple de code a reproduire tel quel]
+1 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+2 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+3	<html xmlns="http://www.w3.org/1999/xhtml">
+
+4	<head>
+5		<title> Mon premier document HTML </title>
+6 	</head>
+7 	<body>
+
+II.2 Commentaires
+[liste à puces]
+* votre document doit déclarer son Document Type Definition (DTD), qui précise au navigateur quelle version de XHTML vous utilisez (lignes 1 et 2)
+* ensuite, vous devez déclarer l'espace de noms XML (XMLNS) en ligne 3
+* Les lignes 1 à 7 et 20 à 21 constituent le squelette de toute page XHTML, seul le titre de la page sera modifié en fonction des besoins.
+* la page est ensuite composée de plusieurs parties. En général, on trouve l'entête (head ) et le corps (body).
+* Le corps contient le document affiché sur le navigateur, l'entête contient d'autres .gourmandises . : ici le titre de la page.
+* Les commentaires < !-- ... --> sont ignorés par le navigateur.
+* Un attribut permet de paramétrer une balise (par exemple à la ligne 12, la balise a à un  attribut href).
+
+II.3 Outils de validation
+Les navigateurs sont très différents les uns des autres, vos pages doivent être aussi propres que possible pour être visualisées correctement sur tous les navigateurs. C'est pourquoi il est important de tester les documents. Pour cela le plus simple est d'utiliser l'outil .tidy. qui vous signalera les erreurs (même si votre navigateur les aurait laissé passer) :
+
+	tidy -qe pageATester.html
+
+Vous pouvez également utiliser le validateur du W3C (http://validator.w3.org/) en lui indiquant l'URL de votre page XHTML, ou encore de lui indiquer le chemin du fichier sur votre disque dur. Vous saurez tout de suite si votre code est bon ou s'il reste quelques corrections à faire... 
+Si le code de votre page n'est pas correct, le validateur vous l'indiquera, en vous précisant quelles sont les lignes incriminées dans votre fichier XHTML, et la nature de l'erreur. En suivant ces instructions, vous pourrez corriger votre code. 
+
+Quand vous aurez une page impeccable, ce qui est loin d'être difficile à obtenir (et qui est très gratifiant, vous verrez), le validateur vous permettra d'insérer dans votre page le code suivant : 
+[a presenter tel quel]
+<p>
+<a href="http://validator.w3.org/check?uri=referer">
+   <img src="http://www.w3.org/Icons/valid-xhtml10"
+        alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+</p>
+
+Vous aurez ainsi dans votre page le logo suivant : 
+[inserer une jolie image ici, qui sera contenue dans un paragraphe]
+     
+
+II.4 N'importe quoi maintenant
+
+[un tableau]
+Pays	Capitale	Langue
+France	Paris	Français
+Italie	Rome	Italien
+Portugal	Lisbonne	Portugais
+Grande-Bretagne	Londes	Anglais
+
+[des liens]
+Retour au debut de la page [ramène a une ancre placee au début du texte]
+Visite du site du zero [envoie sur le site du zero]
+image cliquable [lien sur page1.html]
+
+
+
+
