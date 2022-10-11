@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Défi</title>
+    <style>
+        body {
+            height: 100%;
+        }
+
+        .doc {
+            height: 5000px;
+            width: 100px;
+            background-color: gray;
+            border-radius: 10px;
+            margin: 20px;
+
+
+        }
+
+        .bar_box {
+            position: fixed;
+            height: 5px;
+            width: 100%;
+            background-color: lightblue;
+        }
+
+        .bar_box .progress {
+            background-color: green;
+            height: 5px;
+            width: 10px;
+            z-index: 9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bar_box">
+        <div class="progress"></div>
+    </div>
+
+    <div class="doc">
+        test de doc
+    </div>
+
+    <script>
+        document.onscroll = function () {
+            var pos = getVerticalScrollPercentage(document.body)
+            document.getElementsByClassName("progress")[0].style.width = Math.round(pos) + "%"
+        }
+        function getVerticalScrollPercentage(elm) {
+            var p = elm.parentNode
+            return (elm.scrollTop || p.scrollTop) / (p.scrollHeight - p.clientHeight) * 100
+        }
+    </script>
+</body>
+
+</html>

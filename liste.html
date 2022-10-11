@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compte rendu TP Web</title>
+    <style>
+        .exemple {
+            border: 3px green dotted;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        code {
+            background: black;
+            color: greenyellow;
+            border: 2px black solid;
+            border-radius: 5px;
+        }
+
+        progress {
+            width: 25%;
+            height: 20px;
+        }
+   
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <ol>
+            <li>
+                <code><b>H</b>1/2/3/4/5/6</code> - <b><code>H1</code> étant le plus grand et <code>H6</code> le plus
+                    petit</b> : Permet d'afficher un titre
+                <!--Exemple -->
+                <div class="exemple">
+                    <h1>Titre de niveau 1</h1>
+                    <h2>Titre de niveau 2</h2>
+                    <h3>Titre de niveau 3</h3>
+                    <h4>Titre de niveau 4</h4>
+                    <h5>Titre de niveau 5</h5>
+                    <h6>Titre de niveau 6</h6>
+                </div>
+            </li>
+            <li>
+                <code>P</code> : Permet d'afficher un paragraphe.
+                <!--Exemple -->
+                <div class="exemple">
+                    <p>Paragraphe</p>
+                </div>
+
+            </li>
+            <li>
+                <code>BR</code> : Permet de faire un retour à la ligne.
+                <!--Exemple -->
+                <div class="exemple">
+                    <p>Paragraphe<br>avec retour à la ligne</p>
+                </div>
+            </li>
+            <li>
+                <code>HR</code> : Permet de faire une ligne horizontale.
+                <!--Exemple -->
+                <div class="exemple">
+                    <p>Paragraphe</p>
+                    <hr>
+                    <p>Paragraphe</p>
+                </div>
+
+            </li>
+            <li>
+                <code>IMG</code> - <b>Attention ceci est une balise autofermante</b> : Permet d'afficher une image.
+                <!--Exemple -->
+                <div class="exemple">
+                    <img src="https://media.datalumni.com/uploads/schools/74583025-1753-4aa1-9868-e6ba8b641db8.jpg"
+                        alt="Photo lycée Ozenne" width="500px">
+                </div>
+
+            </li>
+            <li>
+                <code>PROGRESS</code> : Permet d'afficher une barre de progression. <i>Dans cet exemple, la barre de
+                    progression fonctionne en fonction du le scroll de la page.</i> &#128526;
+                <!--Exemple -->
+                <div class="exemple">
+                    <progress id="progress" value="0" max="100"> 0% </progress>
+                </div>
+            </li>
+
+            <li>
+                <code>UL</code> : Permet d'afficher une liste non ordonnée.
+                <!--Exemple -->
+                <div class="exemple">
+                    <ul>
+                        <li>Element 1</li>
+                        <li>Element 2</li>
+                        <li>Element 3</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <code>OL</code> : Permet d'afficher une liste ordonnée comme celle-ci.
+                <!--Exemple -->
+                <div class="exemple">
+                    <ol>
+                        <li>Element 1</li>
+                        <li>Element 2</li>
+                        <li>Element 3</li>
+                    </ol>
+                </div>
+            </li>
+            <li>
+                <code>LI</code> : Permet d'afficher un élément de liste.
+                <!--Exemple -->
+                <div class="exemple">
+                    <ul>
+                        <li>Element 1</li>
+                        <li>Element 2</li>
+                        <li>Element 3</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <code>A</code> : Permet d'integrer un lien
+                <!--Exemple -->
+                <div class="exemple">
+                    <a href="https://ozenne.mon-ent-occitanie.fr/" target="_target">Exemple de lien vers l'ENT</a>
+                </div>
+            </li>
+            <li>
+                <code>TABLE</code> : Permet d'afficher un tableau
+                <!--Exemple -->
+                <div class="exemple">
+                    <table border="1">
+                        <tr bgcolor="#FF7700">
+                            <th>Entête 1</th>
+                            <th>Entête 2</th>
+                            <th>Entête 3</th>
+                        </tr>
+                        <tr bgcolor="#af6900">
+                            <td>Cellule 1</td>
+                            <td>Cellule 2</td>
+                            <td>Cellule 3</td>
+                        </tr>
+                        <tr bgcolor="#ff0000">
+                            <td>Cellule 1</td>
+                            <td>Cellule 2</td>
+                            <td>Cellule 3</td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+
+            <li>
+                <code>audio</code>
+                <!--Exemple -->
+                <div class="exemple">
+                    <audio controls>
+
+                        <source src="test.mp3" type="audio/mpeg">
+
+                    </audio>
+                </div>
+            </li>
+
+            <li>
+                <code>video</code>
+                <!--Exemple -->
+                <div class="exemple">
+                    <video controls autoplay>
+                        <source src="test.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </li>
+
+
+
+
+
+
+
+
+        </ol>
+    </div>
+    <script>
+        document.onscroll = function () {
+            var pos = getVerticalScrollPercentage(document.body)
+            let progress = document.getElementById("progress")
+            progress.value = pos
+            progress.innerHTML = pos + "%"
+
+        }
+        function getVerticalScrollPercentage(elm) {
+            var p = elm.parentNode
+            return (elm.scrollTop || p.scrollTop) / (p.scrollHeight - p.clientHeight) * 100
+        }
+    </script>
+
+</body>
+
+</html>
