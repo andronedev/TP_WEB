@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 5 (formulaire)</title>
+    <style>
+        .formulaire fieldset {
+            background-color: rgb(253, 253, 122);
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" class="formulaire">
+
+        <fieldset>
+            <legend>Votre avis nous interesse</legend>
+
+            <table>
+                <tr>
+                    <td>
+                        <label for="genre">Civilité</label>
+                    </td>
+
+                    <td>
+
+                        <input type="radio" name="genre" value="Madame">
+                        <label for="Madame">Madame</label>
+
+                        <input type="radio" name="genre" value="Monsieur">
+                        <label for="Monsieur">Monsieur</label>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="nomEtPrenom">Nom / Prénom</label>
+                    </td>
+                    <td>
+                        <input type="text" name="nomEtPrenom">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="adressePostal">Votre adresse postal</label>
+                    </td>
+                    <td>
+                        <textarea type="text" name="adressePostal"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="noPostalEtLocalite">N° Postal / Localite</label>
+                    </td>
+                    <td>
+                        <input type="number" name="noPostalEtLocalite">
+                        <input type="text" name="localite">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pays">Pays</label>
+                    </td>
+                    <td>
+                        <select name="pays" id="pays">
+                            <option value="Belgique">Belgique</option>
+                            <option value="France">France</option>
+                            <option value="Luxembourg">Luxembourg</option>
+                            <option value="Suisse">Suisse</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="commentAvezVousConnuLeLycee">Comment avez-vous connu le lycée ?</label></td>
+                    <td>
+                        <select name="commentAvezVousConnuLeLycee" id="commentAvezVousConnuLeLycee">
+                            <option value="presse">Presse</option>
+                            <option value="salonInformation">Salon d'information</option>
+                            <option value="journeePortesOuvertes">Journée portes ouvertes</option>
+                            <option value="boucheAOreille">Bouche à oreille</option>
+                        </select>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="niveauScolaire">Quel est votre niveau scolaire ?</label>
+                    </td>
+                    <td>
+                        <select name="niveauScolaire" id="niveauScolaire">
+                            <option value="bacGeneral">Bac général</option>
+                            <option value="bacTechnologique">Bac technologique</option>
+                            <option value="bacTechnique">Bac technique</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+
+                        <button type="submit">
+                            Soumettre
+                        </button>
+                        <button>
+                            Annuler
+                        </button>
+                    </td>
+                </tr>
+            </table>
+
+
+
+
+
+
+        </fieldset>
+
+    </form>
+</body>
+
+</html>
