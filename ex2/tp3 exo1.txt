@@ -1,28 +1,4 @@
-XHTML	 [titre de niveau 1]
-       
-I INTRODUCTION	 [titre de niveau 2]
-[paragraphe]
-L'un des principes du développement WEB actuel est la séparation rigoureuse de deux éléments :
-[liste a puces]
-* le contenu d'un site (le texte, les images) 
-* le présentation de ce contenu (design du site, choix des polices de caractère, des couleurs, etc.)
-[paragraphe]
-Deux techniques et deux langages sont apparus pour répondre à ces deux aspects du développement : XHTML (eXtensible HyperText Markup Language) pour structurer le contenu des pages et CSS (Cascading Style Sheet) pour définir la mise en forme de ce contenu. Ce poly est consacré à l'étude des bases de XHTML.
-[paragraphe]
-XHTML est issu d'une famille nombreuse, et elle n'a pas fini de s'étendre ! L'aïeul s'appelle SGML ; il eut deux enfants, HTML puis XML. XML eut à son tour un enfant, qui s'appelle XHTML et ressemble comme deux gouttes d'eau à son oncle HTML. 
-La norme du XHTML est définie par le W3C, qui encourage les concepteurs de pages web à passer du HTML au XHTML. L'avantage du XHTML sur le HTML est son extensibilité, qui lui vient du langage XML. À terme, le HTML est appelé à disparaître. 
 
-II DEMARRER RAPIDEMENT [titre de niveau 2]
-
-II.1 Premier document [titre de niveau 3]
-
-N'importe quel éditeur de texte (notepad, scriptEdit, vim) convient pour créer un document HTML. Vous n'avez pas besoin de connexion internet, ou de serveur pour visualiser le résultat : un navigateur suffit (Netscape Navigator, Internet Explorer, Mozilla ...)
-
-Tapez le document suivant, et enregistrez le sous le nom : monpremier.html
-Visualisez le ensuite avec votre navigateur favori.
-Prenez le temps de comparer votre code XHTML et ce que vous voyez à l'écran. La suite du cours détaillera certaines balises que vous avez utilisé.
-
-[exemple de code a reproduire tel quel]
 1 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 2 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
 3	<html xmlns="http://www.w3.org/1999/xhtml">
@@ -33,24 +9,24 @@ Prenez le temps de comparer votre code XHTML et ce que vous voyez à l'écran. La 
 7 	<body>
 
 II.2 Commentaires
-[liste à puces]
-* votre document doit déclarer son Document Type Definition (DTD), qui précise au navigateur quelle version de XHTML vous utilisez (lignes 1 et 2)
-* ensuite, vous devez déclarer l'espace de noms XML (XMLNS) en ligne 3
-* Les lignes 1 à 7 et 20 à 21 constituent le squelette de toute page XHTML, seul le titre de la page sera modifié en fonction des besoins.
-* la page est ensuite composée de plusieurs parties. En général, on trouve l'entête (head ) et le corps (body).
-* Le corps contient le document affiché sur le navigateur, l'entête contient d'autres .gourmandises . : ici le titre de la page.
-* Les commentaires < !-- ... --> sont ignorés par le navigateur.
-* Un attribut permet de paramétrer une balise (par exemple à la ligne 12, la balise a à un  attribut href).
+[liste Ã  puces]
+* votre document doit dÃ©clarer son Document Type Definition (DTD), qui prÃ©cise au navigateur quelle version de XHTML vous utilisez (lignes 1 et 2)
+* ensuite, vous devez dÃ©clarer l'espace de noms XML (XMLNS) en ligne 3
+* Les lignes 1 Ã  7 et 20 Ã  21 constituent le squelette de toute page XHTML, seul le titre de la page sera modifiÃ© en fonction des besoins.
+* la page est ensuite composÃ©e de plusieurs parties. En gÃ©nÃ©ral, on trouve l'entÃªte (head ) et le corps (body).
+* Le corps contient le document affichÃ© sur le navigateur, l'entÃªte contient d'autres .gourmandises . : ici le titre de la page.
+* Les commentaires < !-- ... --> sont ignorÃ©s par le navigateur.
+* Un attribut permet de paramÃ©trer une balise (par exemple Ã  la ligne 12, la balise a Ã  un  attribut href).
 
 II.3 Outils de validation
-Les navigateurs sont très différents les uns des autres, vos pages doivent être aussi propres que possible pour être visualisées correctement sur tous les navigateurs. C'est pourquoi il est important de tester les documents. Pour cela le plus simple est d'utiliser l'outil .tidy. qui vous signalera les erreurs (même si votre navigateur les aurait laissé passer) :
+Les navigateurs sont trÃ¨s diffÃ©rents les uns des autres, vos pages doivent Ãªtre aussi propres que possible pour Ãªtre visualisÃ©es correctement sur tous les navigateurs. C'est pourquoi il est important de tester les documents. Pour cela le plus simple est d'utiliser l'outil .tidy. qui vous signalera les erreurs (mÃªme si votre navigateur les aurait laissÃ© passer) :
 
 	tidy -qe pageATester.html
 
-Vous pouvez également utiliser le validateur du W3C (http://validator.w3.org/) en lui indiquant l'URL de votre page XHTML, ou encore de lui indiquer le chemin du fichier sur votre disque dur. Vous saurez tout de suite si votre code est bon ou s'il reste quelques corrections à faire... 
-Si le code de votre page n'est pas correct, le validateur vous l'indiquera, en vous précisant quelles sont les lignes incriminées dans votre fichier XHTML, et la nature de l'erreur. En suivant ces instructions, vous pourrez corriger votre code. 
+Vous pouvez Ã©galement utiliser le validateur du W3C (http://validator.w3.org/) en lui indiquant l'URL de votre page XHTML, ou encore de lui indiquer le chemin du fichier sur votre disque dur. Vous saurez tout de suite si votre code est bon ou s'il reste quelques corrections Ã  faire... 
+Si le code de votre page n'est pas correct, le validateur vous l'indiquera, en vous prÃ©cisant quelles sont les lignes incriminÃ©es dans votre fichier XHTML, et la nature de l'erreur. En suivant ces instructions, vous pourrez corriger votre code. 
 
-Quand vous aurez une page impeccable, ce qui est loin d'être difficile à obtenir (et qui est très gratifiant, vous verrez), le validateur vous permettra d'insérer dans votre page le code suivant : 
+Quand vous aurez une page impeccable, ce qui est loin d'Ãªtre difficile Ã  obtenir (et qui est trÃ¨s gratifiant, vous verrez), le validateur vous permettra d'insÃ©rer dans votre page le code suivant : 
 [a presenter tel quel]
 <p>
 <a href="http://validator.w3.org/check?uri=referer">
@@ -58,7 +34,7 @@ Quand vous aurez une page impeccable, ce qui est loin d'être difficile à obtenir
         alt="Valid XHTML 1.0!" height="31" width="88" /></a>
 </p>
 
-Vous aurez ainsi dans votre page le logo suivant : 
+Vous aurez ainsi dans votre page le logo suivant : 
 [inserer une jolie image ici, qui sera contenue dans un paragraphe]
      
 
@@ -66,16 +42,12 @@ II.4 N'importe quoi maintenant
 
 [un tableau]
 Pays	Capitale	Langue
-France	Paris	Français
+France	Paris	FranÃ§ais
 Italie	Rome	Italien
 Portugal	Lisbonne	Portugais
 Grande-Bretagne	Londes	Anglais
 
 [des liens]
-Retour au debut de la page [ramène a une ancre placee au début du texte]
+Retour au debut de la page [ramÃ¨ne a une ancre placee au dÃ©but du texte]
 Visite du site du zero [envoie sur le site du zero]
 image cliquable [lien sur page1.html]
-
-
-
-
