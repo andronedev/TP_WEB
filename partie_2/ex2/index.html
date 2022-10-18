@@ -9,6 +9,8 @@
     <style>
         .formulaire fieldset {
             background-color: rgb(253, 253, 122);
+            transition: background-color 1s;
+
         }
     </style>
 </head>
@@ -59,7 +61,7 @@
                         <label for="noPostalEtLocalite">N° Postal / Localite</label>
                     </td>
                     <td>
-                        <input type="number" name="noPostalEtLocalite">
+                        <input type="text" name="noPostalEtLocalite" maxlength=5 pattern="[0-9]{5}">>
                         <input type="text" name="localite">
                     </td>
 
@@ -100,6 +102,47 @@
                         </select>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <label for="ideeDeVotreNiveau">
+                            Quelle est votre idée de votre niveau ?
+                        </label>
+                    </td>
+                    <td>
+                        <input type="range" name="ideeDeVotreNiveau" id="ideeDeVotreNiveau" min="0" max="20">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dateDeNaissance">
+                            Date de naissance
+                        </label>
+                    </td>
+                    <td>
+                        <input type="date" name="dateDeNaissance" id="dateDeNaissance">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="heureDeNaissance">
+                            Heure de naissance
+                        </label>
+                    </td>
+                    <td>
+                        <input type="time" name="heureDeNaissance" id="heureDeNaissance">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="boutonMagique">Bouton Magique</label>
+                    </td>
+                    <td>
+                        <button type="button" id="magique">C'est Magique</button>
+                    </td>
+                </tr>
 
                 <tr>
                     <td>
@@ -107,7 +150,7 @@
                         <button type="submit">
                             Soumettre
                         </button>
-                        <button>
+                        <button type="reset">
                             Annuler
                         </button>
                     </td>
@@ -122,6 +165,42 @@
         </fieldset>
 
     </form>
+
+    <script>
+        var btn = document.getElementById("magique")
+        btn.addEventListener("click", function () {
+            btn.disabled = true;
+
+            document.querySelectorAll("fieldset")[0].style.backgroundColor = randomColor();
+            let boucle = setInterval(function () {
+                document.querySelectorAll("fieldset")[0].style.backgroundColor = randomColor();
+            }, 505);
+            setTimeout(function () {
+                clearInterval(boucle);
+                setTimeout(function () {
+                    btn.disabled = false;
+                }, 500);
+            }, 10000);
+        })
+        function randomColor() {
+            var bgColor = "#";
+            for (var i = 0; i < 6; i++) {
+                bgColor += Math.floor(Math.random() * 10);
+            }
+            // if color is too dark, make it lighter
+            if (parseInt(bgColor.slice(1), 16) < 0x555555) {
+                setTimeout(() => {
+                    document.body.style.color = "white";
+                }, 500)
+            } else {
+                setTimeout(() => {
+                    document.body.style.color = "black";
+                }, 500)
+            }
+            return bgColor;
+
+        }
+    </script>
 </body>
 
 </html>
