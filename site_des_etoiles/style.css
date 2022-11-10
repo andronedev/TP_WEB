@@ -1,0 +1,118 @@
+body {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #303D58;
+    font-family: Arial, "Times New Roman", Times, sans-serif;
+   
+}
+
+a {
+    color: #F7E444;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#en_tete{
+    color: #F7E444;
+    border: 1px dotted;
+    text-align: end;
+    padding-right: 50px;
+    background-image: url(./assets/header.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    height: 109px;
+
+    margin-bottom: 10px;
+
+
+}
+#en_tete h1 {
+    color: transparent;
+}
+
+#etoile_filante {
+    background: url(./assets/pictoilefilante.png) no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 168px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+#menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+#menu .sous_menu {
+    background-color: black;
+    border: 1px dotted yellow;
+    min-width: 150px;
+    padding-right: 30px;
+}
+#menu .sous_menu h3{
+    color: rgb(59, 206, 255);
+    text-align: center;
+}
+#menu .sous_menu li{
+    color: yellow;
+  
+}
+
+#corps{
+    background-color: black;
+    border: 1px dotted yellow;
+    color: orange;
+    padding: 10px;
+    width: auto;
+    flex: 1;
+}
+
+#pied_de_page{
+    background-color: black;
+    border: 1px dotted yellow;
+    color: orange;
+    padding: 10px;
+    width: auto;
+    flex: 1;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+#content{
+    display: flex;
+    gap: 10px;
+    
+    
+}
+
+
+@media screen and (max-width: 600px) {
+    #content{
+        display: block;
+    }
+    #menu{
+        display: block;
+    }
+    #corps{
+        display: block;
+    }
+    #pied_de_page{
+        margin-top: 0;
+    }
+    #etoile_filante{
+        width: 100px;
+        height: 84px;
+        top: 20px;
+        left: 50px;
+    }
+   
+}
