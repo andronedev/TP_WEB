@@ -48,6 +48,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
     
 }
 
@@ -56,6 +57,7 @@ a:hover {
     border: 1px dotted yellow;
     min-width: 150px;
     padding-right: 30px;
+    flex-grow: 1;
 }
 #menu .sous_menu h3{
     color: rgb(59, 206, 255);
