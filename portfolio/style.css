@@ -30,8 +30,8 @@ a:visited {
     height: 100vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+
+   
 
 }
 
@@ -44,8 +44,7 @@ a:visited {
     overflow: hidden;
     backdrop-filter: blur(10px);
     background-color: rgb(215, 215, 215);
-    min-width: 220px;
-    max-width: 270px;
+    min-width: 260px;
 
 }
 
@@ -88,14 +87,23 @@ header .logo {
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
 
 }
 /* Section droite */
 .main .content {
     width: 80%;
-    height: 100%;
+    
+    margin: 20px;
+    display: flex;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-right: auto;
+    gap: 20px;
+  
 
 }
 
@@ -116,29 +124,31 @@ header .logo {
     transform: scale(1.2);
 }
 
-.title {
-    margin: 10px;
-}
-
 
 .card {
+
+    width: 280px;
+    height: 280px;
+
+
+
     background-color: rgb(187, 237, 255);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     gap: 10px;
     padding: 10px;
     border-radius: 20px;
     backdrop-filter: blur(10px);
-    margin: 10px;
+  
     transition: transform 0.5s;
     transition: box-shadow 0.5s;
 
-    cursor: pointer;
+
 
 }
 .card .card-title {
@@ -152,13 +162,21 @@ header .logo {
    
     font-size: 1em;
     font-weight: 500;
-    text-align: center;
+    text-align: justify;
     user-select: none;
+    word-wrap: break-word;
+
 }
 .card:hover {
     box-shadow: 0 0 5px rgb(218, 232, 247);
 }
 
+
+.title{
+    font-size: 1.1em;
+    font-weight: 500;
+    margin: 20px;
+}
 /* sur mobile */
 @media screen and (max-width: 768px) {
     .main {
@@ -173,6 +191,7 @@ header .logo {
         border-radius: 0;
         min-width: 0;
         max-width: 100%;
+
     }
 
     .main .content {
@@ -184,6 +203,17 @@ header .logo {
         border-radius: 0;
         flex-direction: row;
         justify-content: space-around;
+    }
+
+    .main .content .card {
+        width: 100%;
+        height: auto;
+        margin: 10px;
+    }
+
+    .main .content{
+        flex-direction: column;
+        
     }
   
 }
