@@ -98,8 +98,7 @@ header .logo {
     margin: 20px;
     display: flex;
     
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-evenly;
     margin-right: auto;
     gap: 20px;
@@ -124,51 +123,16 @@ header .logo {
     transform: scale(1.2);
 }
 
-
-.card {
-
-    width: 280px;
-    height: 280px;
-
-
-
-    background-color: rgb(187, 237, 255);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-  
-    transition: transform 0.5s;
-    transition: box-shadow 0.5s;
-
-
-
-}
-.card .card-title {
-    
+.card-title {
     font-size: 1.5em;
-    font-weight: 700;
-    text-align: center;
-    user-select: none;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+    margin: 10px;
 }
-.card .card-text {
-   
-    font-size: 1em;
-    font-weight: 500;
-    text-align: justify;
-    user-select: none;
-    word-wrap: break-word;
-
-}
-.card:hover {
-    box-shadow: 0 0 5px rgb(218, 232, 247);
+.card-text {
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+    margin: 10px;
 }
 
 
