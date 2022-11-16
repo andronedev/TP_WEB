@@ -143,6 +143,13 @@ header .logo {
     margin: 20px;
     color: rgb(255, 255, 255);
 }
+
+.play_store_logo {
+
+    filter: invert(100%);
+
+}
+
 /* sur mobile */
 @media screen and (max-width: 768px) {
     .main {
