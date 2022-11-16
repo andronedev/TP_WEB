@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(29, 29, 29);
 /* roboto font */
     font-family: 'Roboto', sans-serif;
 
@@ -9,16 +9,17 @@ body {
 
 a {
     text-decoration: none;
-    color: rgb(160, 157, 255);
+   color: rgb(160, 157, 255);
+    
     transition: color 0.5s;
 }
 
 a:hover {
-   color: rgb(0, 0, 0);
+   color: rgb(255, 255, 255);
 
 }
 a:visited {
-    color: #000;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -42,13 +43,13 @@ a:visited {
     border-radius: 0 20px 20px 0;
     overflow: hidden;
     backdrop-filter: blur(10px);
-    background-color: rgb(215, 215, 215);
+    background-color: rgb(74, 74, 74);
     min-width: 260px;
 
 }
 
 .main .left div {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 1.2em;
     margin: 10px;
 }
@@ -61,7 +62,7 @@ header {
     align-items: center;
     background-color: #fff;
     border-radius: 0 20px 0 0;
-    background-image: url(blur.jpg);
+    background-image: url(blur-dark.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -70,8 +71,8 @@ header {
 }
 
 header h1 {
-    mix-blend-mode: color-dodge;
-    color : rgb(168, 168, 255);
+    mix-blend-mode: lighten;
+    color : rgb(255, 181, 181);
     font-size: 2em;
     font-family: 'arial';
     font-weight: 900;
@@ -113,7 +114,8 @@ header .logo {
     margin: 10px;  
 }
 .sociaux a {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    filter: invert(100%);
     font-size: 1.5em;
     transition: color 0.5s;
     transition: transform 0.5s;
@@ -125,12 +127,12 @@ header .logo {
 .card-title {
     font-size: 1.5em;
     font-weight: 800;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     margin: 10px;
 }
 .card-text {
     font-size: 1.2em;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     margin: 10px;
 }
 
@@ -139,6 +141,7 @@ header .logo {
     font-size: 1.1em;
     font-weight: 500;
     margin: 20px;
+    color: rgb(255, 255, 255);
 }
 /* sur mobile */
 @media screen and (max-width: 768px) {
